@@ -1,50 +1,32 @@
-<h1>Welcome to the Love Calculator!</h1>
+<html>
+<body>
 
-<p>To receive input of two names:</p>
+<h1>Love Match calculator</h1>
 
-<pre>
-name1 = input("What is your name? \n")
-name2 = input("What is their name? \n")
-</pre>
+<p>Welcome to the Love Match calculator! This simple program calculates the compatibility of two people based on their names.</p>
 
-<p>To convert all the input to lower case:</p>
+<h2>How to use</h2>
 
-<pre>
-name1 = name1.lower()
-name2 = name2.lower()
-</pre>
+<ol>
+  <li>Clone or download this repository to your local machine</li>
+  <li>Navigate to the directory where you have saved the script</li>
+  <li>Run the script using Python 3: <code>python love_calculator.py</code></li>
+  <li>Follow the prompts to enter the names of the two people</li>
+</ol>
 
-<p>To calculate the love number we have to combine the two name and count the occurence of true love in it:</p>
+<h2>What it does</h2>
 
-<pre>
-combined_string = name1 + name2
-combined_lowercase_string = combined_string.lower()
-t = combined_lowercase_string.count('t')
-r = combined_lowercase_string.count('r')
-u = combined_lowercase_string.count('u')
-e = combined_lowercase_string.count('e')
+<p>The Love Match calculator takes the input of two names and converts them to lowercase. It then combines the two names and counts the number of occurrences of the letters in the word "true" and the word "love" in the combined string. The program calculates the love score by adding the counts of the letters in "true" and "love" and returns a message based on the score.</p>
 
-true_count = t + r + u + e
+<h2>Output</h2>
 
-l = combined_lowercase_string.count('l')
-o = combined_lowercase_string.count('o')
-v = combined_lowercase_string.count('v')
-e = combined_lowercase_string.count('e')
+<p>The program will output the love score for the two names as well as a message indicating the level of compatibility based on the score. The possible messages are:</p>
 
-love_count = l + o + v + e
+<ul>
+  <li>"You may not be the best for each other" if the score is less than or equal to 50</li>
+  <li>"You go together like coke and menthos" if the score is greater than 50 and less than 90</li>
+  <li>"You are good together" if the score is 90 or above</li>
+</ul>
 
-true_love_count = str(true_count) + str(love_count)
-
-print(f'the love count for {name1} and {name2} is {true_love_count}')
-</pre>
-
-<p>The conditional statement to generate message depending on the number gotten:</p>
-
-<pre>
-if true_love_count <= '40' and true_love_count == '50':
-    print(f'your love score is {true_love_count}, you may not be the best for each other')
-elif true_love_count > '50' and true_love_count < '90':
-    print(f'your love score is {true_love_count}, you go together like coke and menthos')
-else:
-    print(f'your love score is {true_love_count}, you are good together')
-</pre>
+</body>
+</html>
